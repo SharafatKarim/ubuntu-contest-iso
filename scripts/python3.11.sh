@@ -2,6 +2,6 @@
 
 set -eux
 
-echo "Installing Python 3.11..."
+echo "🐍 Installing Python 3.11..."
 
 apt install -y python3-full

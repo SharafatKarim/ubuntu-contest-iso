@@ -4,7 +4,7 @@ set -eux
 
 KOTLIN_VERSION="2.1.10"
 
-echo -e "\nInstalling Kotlin Compiler $KOTLIN_VERSION ...\n"
+echo -e "\n🅺 Installing Kotlin Compiler $KOTLIN_VERSION ...\n"
 
 export DEBIAN_FRONTEND=noninteractive
 apt-get install -y wget unzip openjdk-17-jre-headless
@@ -21,5 +21,5 @@ rm -f kotlin-compiler.zip
 ln -sf /opt/kotlinc/bin/kotlinc /usr/local/bin/kotlinc
 ln -sf /opt/kotlinc/bin/kotlin /usr/local/bin/kotlin
 
-echo -e "\nPrinting Kotlin compiler version ...\n"
+echo -e "\n📋 Printing Kotlin compiler version ...\n"
 kotlinc -version

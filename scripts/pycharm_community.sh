@@ -5,7 +5,7 @@ set -eux
 PYCHARM_VERSION="2025.2.4"
 PYCHARM_NAME="pycharm-community-${PYCHARM_VERSION}"
 
-echo "\nInstall Pycharm Community $PYCHARM_VERSION ..\n"
+echo -e "\n🐍 Install Pycharm Community $PYCHARM_VERSION ..\n"
 
 # download pycharm community edition
 # wget "data.services.jetbrains.com/products/download?code=PCC&platform=linux" -O pycharm.tar.gz

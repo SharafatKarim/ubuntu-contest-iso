@@ -7,7 +7,7 @@ TARGET_DIR="/usr/share/backgrounds"
 TARGET_PATH="$TARGET_DIR/contest_wallpaper.jpg"
 
 if [[ -f "$WALLPAPER_SRC" ]]; then
-	echo "Installing custom wallpaper..."
+	echo "🖼️ Installing custom wallpaper..."
 	mkdir -p "$TARGET_DIR"
 	cp -v "$WALLPAPER_SRC" "$TARGET_PATH"
 

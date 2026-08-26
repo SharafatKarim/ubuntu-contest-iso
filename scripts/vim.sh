@@ -2,7 +2,7 @@
 
 set -eux
 
-echo "\nInstalling Vim ...\n"
+echo -e "\n⚡ Installing Vim ...\n"
 apt install -y vim-gtk3
-echo "\nPrinting Vim version ...\n"
+echo -e "\n📋 Printing Vim version ...\n"
 vim --version
