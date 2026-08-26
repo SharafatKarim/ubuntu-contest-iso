@@ -2,6 +2,8 @@
 
 set -eux
 
+ECLIPSE_VERSION="2025-09"
+
 if [[ -f "/usr/share/applications/eclipse.desktop" || -d "/opt/eclipse" ]]; then
 	echo "Eclipse is already installed. Skipping..."
 	exit 0
