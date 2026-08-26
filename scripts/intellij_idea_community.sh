@@ -4,6 +4,11 @@ set -eux
 
 IDEA_VERSION='2025.2.5'
 
+if [[ -f "/usr/share/applications/jetbrains-idea-ce.desktop" || -d "/opt/idea-ce-$IDEA_VERSION" ]]; then
+	echo "💻 IntelliJ IDEA Community Edition is already installed. Skipping..."
+	exit 0
+fi
+
 echo -e "\n💻 Installing IntelliJ IDEA Community Edition $IDEA_VERSION ...\n"
 
 # download intellij community edition if not already downloaded

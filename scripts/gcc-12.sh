@@ -2,6 +2,11 @@
 
 set -eux
 
+if command -v gcc-12 &>/dev/null && command -v g++-12 &>/dev/null; then
+	echo "⚙️ gcc-12 and g++-12 are already installed. Skipping..."
+	exit 0
+fi
+
 echo "⚙️ Installing gcc-12, g++-12..."
 
 apt install -y gcc-12 g++-12

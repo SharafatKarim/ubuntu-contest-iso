@@ -5,6 +5,11 @@ set -eux
 PYCHARM_VERSION="2025.2.4"
 PYCHARM_NAME="pycharm-community-${PYCHARM_VERSION}"
 
+if [[ -f "/usr/share/applications/jetbrains-pycharm-ce.desktop" || -d "/opt/${PYCHARM_NAME}" ]]; then
+	echo "🐍 PyCharm Community Edition is already installed. Skipping..."
+	exit 0
+fi
+
 echo -e "\n🐍 Install Pycharm Community $PYCHARM_VERSION ..\n"
 
 # download pycharm community edition if not already downloaded

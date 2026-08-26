@@ -4,6 +4,11 @@ set -eux
 
 KOTLIN_VERSION="2.1.10"
 
+if command -v kotlinc &>/dev/null; then
+	echo "🅺 Kotlin Compiler is already installed. Skipping..."
+	exit 0
+fi
+
 echo -e "\n🅺 Installing Kotlin Compiler $KOTLIN_VERSION ...\n"
 
 export DEBIAN_FRONTEND=noninteractive

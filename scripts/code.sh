@@ -2,6 +2,11 @@
 
 set -eux
 
+if command -v code &>/dev/null; then
+	echo "📝 VS Code is already installed. Skipping..."
+	exit 0
+fi
+
 echo "📝 Installing VS Code ..."
 # https://code.visualstudio.com/docs/setup/linux
 

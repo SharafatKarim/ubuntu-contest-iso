@@ -2,7 +2,12 @@
 
 set -eux
 
-ECLIPSE_VERSION="2025-09"
+if [[ -f "/usr/share/applications/eclipse.desktop" || -d "/opt/eclipse" ]]; then
+	echo "Eclipse is already installed. Skipping..."
+	exit 0
+fi
+
+echo "Installing Eclipse..."
 
 # download eclipse if not already downloaded
 if [[ ! -f "eclipse.tar.gz" ]]; then
