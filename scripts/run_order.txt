@@ -33,7 +33,7 @@ codeblocks.sh
 geany.sh
 pycharm_community.sh
 intellij_idea_community.sh
-eclipse.sh
+# eclipse.sh
 
 # --- Additional support packages ---
 openssh_server.sh
