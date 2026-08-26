@@ -2,7 +2,7 @@
 
 set -eux
 
-echo "Installing gcc-12, g++-12..."
+echo "⚙️ Installing gcc-12, g++-12..."
 
 apt install -y gcc-12 g++-12
 

@@ -2,7 +2,7 @@
 
 set -eux
 
-echo "\nInstalling Geany ...\n"
+echo -e "\n💡 Installing Geany ...\n"
 apt install -y geany
-echo "\nPrinting Geany version ...\n"
+echo -e "\n📋 Printing Geany version ...\n"
 geany --version

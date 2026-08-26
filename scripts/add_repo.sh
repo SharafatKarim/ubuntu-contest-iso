@@ -6,8 +6,8 @@ set -eux
 # apt update && apt install -y software-properties-common
 apt install -y software-properties-common
 
-echo "Enabling universe repo.."
+echo "📦 Enabling universe repo..."
 add-apt-repository -y universe
 
-echo "Enabling multiverse repo.."
+echo "📦 Enabling multiverse repo..."
 add-apt-repository -y multiverse

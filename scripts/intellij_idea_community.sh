@@ -4,7 +4,7 @@ set -eux
 
 IDEA_VERSION='2025.2.5'
 
-echo "\nInstalling IntelliJ IDEA Community Edition $IDEA_VERSION ...\n"
+echo -e "\n💻 Installing IntelliJ IDEA Community Edition $IDEA_VERSION ...\n"
 
 # download pycharm community edition
 wget -c "https://download.jetbrains.com/idea/ideaIC-$IDEA_VERSION.tar.gz"

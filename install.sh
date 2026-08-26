@@ -15,6 +15,6 @@ fi
 
 scripts=( $(cat "$run_order" | grep "\S" | grep -v "^#" ) )
 for script in "${scripts[@]}"; do
-	echo -e "\nExecuting $script ...\n"
+	echo -e "\n🚀 Executing $script ...\n"
 	bash "$shdir/$script"
 done

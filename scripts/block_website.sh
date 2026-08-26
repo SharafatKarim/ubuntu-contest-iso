@@ -7,7 +7,7 @@ ALLOWED_DOMAIN="${ALLOWED_DOMAIN:-"toph.co"}"
 # Upstream DNS server to resolve real IPs (e.g. 1.1.1.1 or contest DNS server IP)
 UPSTREAM_DNS="${UPSTREAM_DNS:-"1.1.1.1"}"
 
-echo "Configuring dnsmasq to block all domain resolution except $ALLOWED_DOMAIN..."
+echo "🌐 Configuring dnsmasq to block all domain resolution except $ALLOWED_DOMAIN..."
 
 # Ensure non-interactive installation
 export DEBIAN_FRONTEND=noninteractive
