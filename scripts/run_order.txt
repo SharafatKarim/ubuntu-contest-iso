@@ -44,6 +44,14 @@ dist_upgrade.sh
 
 copy_dots.sh
 
+# === Custom wallpaper setup ===
+
+set_wallpaper.sh
+
+# === Network restriction / Firewall whitelisting ===
+
+block_website.sh
+
 # === Create users ===
 
 add_users.sh
@@ -51,3 +59,4 @@ add_users.sh
 # === Copy user-specific files ===
 
 copy_admin_scripts.sh
+

@@ -6,16 +6,16 @@ set -eux
 # It removes unnecessary (for our purposes) packages like
 # thunderbird, libreoffice, rhythmbox, aisleriot etc.
 
-apt remove -y --purge \
-	aisleriot \
-	gnome-mahjongg \
-	gnome-mines \
-	gnome-sudoku \
-	'libreoffice*' \
-	rhythmbox \
-	shotwell \
-	thunderbird \
-	zsys
+# apt remove -y --purge \
+# 	aisleriot \
+# 	gnome-mahjongg \
+# 	gnome-mines \
+# 	gnome-sudoku \
+# 	'libreoffice*' \
+# 	rhythmbox \
+# 	shotwell \
+# 	thunderbird \
+# 	zsys
 
 # remove unused packages
-apt autoremove -y
+# apt autoremove -y

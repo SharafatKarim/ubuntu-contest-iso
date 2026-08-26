@@ -2,6 +2,6 @@
 
 set -eux
 
-echo "Installing openssh-server..."
+# echo "Installing openssh-server..."
 
-apt install -y openssh-server
+# apt install -y openssh-server

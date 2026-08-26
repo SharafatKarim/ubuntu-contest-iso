@@ -156,18 +156,18 @@ check_packages() {
 }
 
 enable_ssh() {
-  echo -n "Starting ssh... "
+  # echo -n "Starting ssh... "
 
-  sudo systemctl enable ssh
-  sudo systemctl start ssh
+  # sudo systemctl enable ssh
+  # sudo systemctl start ssh
 
-  sudo ufw enable
-  sudo ufw allow ssh
+  # sudo ufw enable
+  # sudo ufw allow ssh
 
-  echo "DONE"
+  # echo "DONE"
 }
 
-update_packages
+# update_packages
 check_packages
 
-enable_ssh
+# enable_ssh
