@@ -19,6 +19,8 @@ google_chrome.sh
 gcc-12.sh
 python3.11.sh
 openjdk17.sh
+kotlin.sh
+
 
 # --- Editors ---
 vim.sh

@@ -139,11 +139,19 @@ check_intellij() {
   check_version "$version" "2025.2.5"
 }
 
+check_kotlin() {
+  local version cmd="kotlinc"
+  echo -n "Checking $cmd ($(which $cmd))... "
+  version="$($cmd -version 2>&1 | grep -Po "\d+\.\d+\.\d+")"
+  check_version "$version" "2.0.0"
+}
+
 check_packages() {
   check_gcc
   check_gpp
   check_java
   check_python
+  check_kotlin
   check_vim
   check_emacs
   check_nano

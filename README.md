@@ -50,6 +50,7 @@ The scripts install the following utilities:
    - G++
    - Python3
    - Java
+   - Kotlin
 * Editors
    - Vim
    - Emacs
