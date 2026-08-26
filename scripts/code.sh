@@ -12,5 +12,5 @@ sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/usr/share/keyrings/microsoft
 rm -f packages.microsoft.gpg
 
 apt install -y apt-transport-https
-apt update -y
+# apt update -y
 apt install -y code
