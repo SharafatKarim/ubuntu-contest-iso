@@ -7,21 +7,22 @@ PYCHARM_NAME="pycharm-community-${PYCHARM_VERSION}"
 
 echo -e "\n🐍 Install Pycharm Community $PYCHARM_VERSION ..\n"
 
-# download pycharm community edition
-# wget "data.services.jetbrains.com/products/download?code=PCC&platform=linux" -O pycharm.tar.gz
-wget -c "https://download.jetbrains.com/python/${PYCHARM_NAME}.tar.gz"
+# download pycharm community edition if not already downloaded
+if [[ ! -f "${PYCHARM_NAME}.tar.gz" ]]; then
+	wget -c "https://download.jetbrains.com/python/${PYCHARM_NAME}.tar.gz"
+fi
 
-# download sha256sum file and verify the checksum
-wget "https://download.jetbrains.com/python/${PYCHARM_NAME}.tar.gz.sha256" -O expected_sha256sum.txt
-sha256sum ${PYCHARM_NAME}.tar.gz >> actual_sha256sum.txt
+if [[ ! -f "expected_sha256sum.txt" ]]; then
+	wget "https://download.jetbrains.com/python/${PYCHARM_NAME}.tar.gz.sha256" -O expected_sha256sum.txt
+fi
+
+sha256sum ${PYCHARM_NAME}.tar.gz > actual_sha256sum.txt
 cat actual_sha256sum.txt | sha256sum -c expected_sha256sum.txt
+rm -f actual_sha256sum.txt
 
 # extract and keep the files in /opt
 tar -zxvf "${PYCHARM_NAME}.tar.gz"
 mv "${PYCHARM_NAME}" /opt
-
-# remove tar and hash files
-rm "${PYCHARM_NAME}.tar.gz" actual_sha256sum.txt expected_sha256sum.txt
 
 # populate desktop entry
 cat > jetbrains-pycharm-ce.desktop << EOF

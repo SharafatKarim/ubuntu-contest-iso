@@ -4,16 +4,15 @@ set -eux
 
 ECLIPSE_VERSION="2025-09"
 
-# download eclipse: https://www.eclipse.org/downloads/packages/
-wget -c -O "eclipse.tar.gz" \
-	"https://mirror.kakao.com/eclipse/technology/epp/downloads/release/${ECLIPSE_VERSION}/R/eclipse-java-${ECLIPSE_VERSION}-R-linux-gtk-x86_64.tar.gz"
+# download eclipse if not already downloaded
+if [[ ! -f "eclipse.tar.gz" ]]; then
+	wget -c -O "eclipse.tar.gz" \
+		"https://mirror.kakao.com/eclipse/technology/epp/downloads/release/${ECLIPSE_VERSION}/R/eclipse-java-${ECLIPSE_VERSION}-R-linux-gtk-x86_64.tar.gz"
+fi
 
 # extract and keep the files in /opt
 tar -zxvf eclipse.tar.gz
 mv "eclipse" /opt
-
-# remove the tarball
-rm eclipse.tar.gz
 
 cat >eclipse.desktop <<EOF
 [Desktop Entry]

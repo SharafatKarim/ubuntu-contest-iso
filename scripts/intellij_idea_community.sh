@@ -6,21 +6,23 @@ IDEA_VERSION='2025.2.5'
 
 echo -e "\n💻 Installing IntelliJ IDEA Community Edition $IDEA_VERSION ...\n"
 
-# download pycharm community edition
-wget -c "https://download.jetbrains.com/idea/ideaIC-$IDEA_VERSION.tar.gz"
+# download intellij community edition if not already downloaded
+if [[ ! -f "ideaIC-$IDEA_VERSION.tar.gz" ]]; then
+	wget -c "https://download.jetbrains.com/idea/ideaIC-$IDEA_VERSION.tar.gz"
+fi
 
-# download sha256sum file and verify the checksum
-wget "https://download.jetbrains.com/idea/ideaIC-$IDEA_VERSION.tar.gz.sha256" -O expected_sha256sum.txt
-sha256sum ideaIC-$IDEA_VERSION.tar.gz >> actual_sha256sum.txt
+if [[ ! -f "expected_sha256sum.txt" ]]; then
+	wget "https://download.jetbrains.com/idea/ideaIC-$IDEA_VERSION.tar.gz.sha256" -O expected_sha256sum.txt
+fi
+
+sha256sum ideaIC-$IDEA_VERSION.tar.gz > actual_sha256sum.txt
 cat actual_sha256sum.txt | sha256sum -c expected_sha256sum.txt
+rm -f actual_sha256sum.txt
 
 # extract and keep the files in /opt
-mkdir idea-ce-$IDEA_VERSION
+mkdir -p idea-ce-$IDEA_VERSION
 tar -zxvf "ideaIC-$IDEA_VERSION.tar.gz" -C idea-ce-$IDEA_VERSION --strip-components 1
 mv idea-ce-$IDEA_VERSION /opt
-
-# remove tar and hash files
-rm "ideaIC-$IDEA_VERSION.tar.gz" actual_sha256sum.txt expected_sha256sum.txt
 
 # populate desktop entry
 cat > jetbrains-idea-ce.desktop << EOF
