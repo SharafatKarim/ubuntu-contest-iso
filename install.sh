@@ -18,3 +18,5 @@ for script in "${scripts[@]}"; do
 	echo -e "\n🚀 Executing $script ...\n"
 	bash "$shdir/$script"
 done
+
+echo -e "\n✅ All scripts executed successfully!\n"

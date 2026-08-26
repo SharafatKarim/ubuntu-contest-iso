@@ -62,3 +62,8 @@ add_users.sh
 
 copy_admin_scripts.sh
 
+# === Cleanup temporary download files and caches ===
+
+cleanup.sh
+
+
