@@ -1,14 +1,11 @@
 # === Upgrade packages ===
-
-dist_upgrade.sh
+# dist_upgrade.sh
 
 # === Add multiple repos ===
-
 add_repo.sh
 
 # === Remove unnecessary packages ===
-
-trim.sh
+# trim.sh
 
 # === Install packages ===
 
@@ -38,32 +35,22 @@ intellij_idea_community.sh
 # --- Additional support packages ---
 openssh_server.sh
 
-# === Upgrade packages ===
-
-dist_upgrade.sh
-
 # === Copy universal dot files ===
-
 copy_dots.sh
 
 # === Custom wallpaper setup ===
-
-set_wallpaper.sh
+# set_wallpaper.sh
 
 # === Network restriction / Firewall whitelisting ===
-
-block_website.sh
+# block_website.sh
 
 # === Create users ===
-
-add_users.sh
+# add_users.sh
 
 # === Copy user-specific files ===
-
-copy_admin_scripts.sh
+# copy_admin_scripts.sh
 
 # === Cleanup temporary download files and caches ===
-
 cleanup.sh
 
 

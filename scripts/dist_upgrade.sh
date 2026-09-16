@@ -2,5 +2,5 @@
 
 set -eux
 
-# apt update
-# apt -y dist-upgrade
+apt update
+apt -y dist-upgrade

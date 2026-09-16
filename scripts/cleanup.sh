@@ -14,8 +14,4 @@ rm -f \
 	expected_sha256sum.txt \
 	actual_sha256sum.txt
 
-# Clean apt cache
-apt-get clean -y
-apt-get autoremove -y
-
 echo -e "\n✨ Cleanup complete!\n"
