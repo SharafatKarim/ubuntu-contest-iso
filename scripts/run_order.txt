@@ -33,7 +33,7 @@ intellij_idea_community.sh
 # eclipse.sh
 
 # --- Additional support packages ---
-openssh_server.sh
+# openssh_server.sh
 
 # === Copy universal dot files ===
 copy_dots.sh
